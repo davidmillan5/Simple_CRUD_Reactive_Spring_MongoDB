@@ -39,7 +39,7 @@ public class ProductController {
         return productService.updateProduct(productDtoMono,id);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete/{id}")
     public Mono<Void> deleteProduct(@PathVariable String id){
         return productService.deleteProduct(id);
     }
